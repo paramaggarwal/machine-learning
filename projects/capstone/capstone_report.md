@@ -1,30 +1,49 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Project
-Joe Udacity  
-December 31st, 2050
+Param Aggarwal 
+January 24th, 2019
+
+Link to Proposal Review: https://review.udacity.com/#!/reviews/1678263
 
 ## I. Definition
-_(approx. 1-2 pages)_
 
 ### Project Overview
-In this section, look to provide a high-level overview of the project in layman’s terms. Questions to ask yourself when writing this section:
-- _Has an overview of the project been provided, such as the problem domain, project origin, and related datasets or input data?_
-- _Has enough background information been given so that an uninformed reader would understand the problem domain and following problem statement?_
+
+Myntra is a fashion e-commerce company in India that has a very large catalog of products to choose from. One can use their website or app to browse through products and buy them. This catalog is manually photographed and uploaded into the Content Management System (CMS). This presents a challenge regarding the validity of this data. Often incorrect images are uploaded and have to be manually verified and removed from the catalog before publishing to the main website.
+
+I have been an employee of Myntra and have seen these problems first hand. My motivation to resolve this issue comes from the understanding of how much such a system could be useful to the company.
 
 ### Problem Statement
+
+As of today this approach involves a lot of stages of manual review and approval. This increases the time from when an item is photographed to when it goes live on the website and can contribute to lost revenue. Fashion is a fast moving industry and new trends have to hit the market as soon as possible. Any attempts at speeding up the review process can help directly contribute to an increase in revenue.
+
+The dataset is downloaded from the Myntra website for existing products that are listed. Hence we also have the labels for these images. For example we know whether the item is a 'topwear' or 'bottomwear'. The dataset consists of 2000 images with half and half split between topwear and bottomwear.
+
+These images are in jpeg format in a suitable resolution with the product identifier as the filename. We also have a separate JSON file which contains the attributes of the image, for example, the category of the clothing. This will be used as labels for our supervised machine learning.
+
+We will be training a Convolutional Neural Network supervised using the category labels in our dataset. We will be using Keras for this and will be using the accuracy score as the metric or optimizing our network.
+
+We need to go through our data once and check that the downloaded dataset images are not corrupted. We will then build our Keras model layers step by step and come up with a Convolutional Neural Network that is trained with the category labels as the supervised learning parameters.
+
+Once we are done with this, we will use some random images from the website to simulate how the system would work for verification of newly uploaded images and point out errors that would be caught before the product goes live on the website.
+
 In this section, you will want to clearly define the problem that you are trying to solve, including the strategy (outline of tasks) you will use to achieve the desired solution. You should also thoroughly discuss what the intended solution will be for this problem. Questions to ask yourself when writing this section:
 - _Is the problem statement clearly defined? Will the reader understand what you are expecting to solve?_
 - _Have you thoroughly discussed how you will attempt to solve the problem?_
 - _Is an anticipated solution clearly defined? Will the reader understand what results you are looking for?_
 
 ### Metrics
+
+As of today this verification is a manual approach. Hence the accuracy of a random classifier will be 0.5 or 50%. Our aim in building our neural network classifier is to beat this benchmark.
+
+We will be evaluating our network performance by splitting out around 20% of our data to be used as a test set. The accuracy score obtained on this dataset will be our evaluation metric. As mentioned above, our goal is to beat the 50% accuracy that a random classifier might have.
+
 In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
 - _Are the metrics you’ve chosen to measure the performance of your models clearly discussed and defined?_
 - _Have you provided reasonable justification for the metrics chosen based on the problem and solution?_
 
 
 ## II. Analysis
-_(approx. 2-4 pages)_
 
 ### Data Exploration
 In this section, you will be expected to analyze the data you are using for the problem. This data can either be in the form of a dataset (or datasets), input data (or input files), or even an environment. The type of data should be thoroughly described and, if possible, have basic statistics and information presented (such as discussion of input features or defining characteristics about the input or environment). Any abnormalities or interesting qualities about the data that may need to be addressed have been identified (such as features that need to be transformed or the possibility of outliers). Questions to ask yourself when writing this section:
@@ -52,7 +71,6 @@ In this section, you will need to provide a clearly defined benchmark result or 
 
 
 ## III. Methodology
-_(approx. 3-5 pages)_
 
 ### Data Preprocessing
 In this section, all of your preprocessing steps will need to be clearly documented, if any were necessary. From the previous section, any of the abnormalities or characteristics that you identified about the dataset will be addressed and corrected here. Questions to ask yourself when writing this section:
@@ -74,7 +92,6 @@ In this section, you will need to discuss the process of improvement you made up
 
 
 ## IV. Results
-_(approx. 2-3 pages)_
 
 ### Model Evaluation and Validation
 In this section, the final model and any supporting qualities should be evaluated in detail. It should be clear how the final model was derived and why this model was chosen. In addition, some type of analysis should be used to validate the robustness of this model and its solution, such as manipulating the input data or environment to see how the model’s solution is affected (this is called sensitivity analysis). Questions to ask yourself when writing this section:
@@ -91,7 +108,6 @@ In this section, your model’s final solution and its results should be compare
 
 
 ## V. Conclusion
-_(approx. 1-2 pages)_
 
 ### Free-Form Visualization
 In this section, you will need to provide some form of visualization that emphasizes an important quality about the project. It is much more free-form, but should reasonably support a significant result or characteristic about the problem that you want to discuss. Questions to ask yourself when writing this section:
@@ -111,15 +127,3 @@ In this section, you will need to provide discussion as to how one aspect of the
 - _Are there further improvements that could be made on the algorithms or techniques you used in this project?_
 - _Were there algorithms or techniques you researched that you did not know how to implement, but would consider using if you knew how?_
 - _If you used your final solution as the new benchmark, do you think an even better solution exists?_
-
------------
-
-**Before submitting, ask yourself. . .**
-
-- Does the project report you’ve written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Analysis** and **Methodology**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your analysis, methods, and results?
-- Have you properly proof-read your project report to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
-- Is the code that implements your solution easily readable and properly commented?
-- Does the code execute without error and produce results similar to those reported?
