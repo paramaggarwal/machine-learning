@@ -11,11 +11,11 @@ Link to Proposal Review: https://review.udacity.com/#!/reviews/1678263
 
 Myntra is a fashion e-commerce company in India that has a very large catalog of products to choose from. One can use their website or app to browse through products and buy them. This catalog is manually photographed and uploaded into the Content Management System (CMS). This presents a challenge regarding the validity of this data. Often incorrect images are uploaded and have to be manually verified and removed from the catalog before publishing to the main website.
 
-I have been an employee of Myntra and have seen these problems first hand. My motivation to resolve this issue comes from the understanding of how much such a system could be useful to the company.
+In this project, we will be automating the review step and building a tool that will automatically classify the uploaded image and check that they are of the correct category as expected. This tool is built using supervised training on a Convolutional Neural Network trained on a dataset of 2000 images.
 
 ### Problem Statement
 
-As of today this approach involves a lot of stages of manual review and approval. This increases the time from when an item is photographed to when it goes live on the website and can contribute to lost revenue. Fashion is a fast moving industry and new trends have to hit the market as soon as possible. Any attempts at speeding up the review process can help directly contribute to an increase in revenue.
+As of today uploading images into the website catalog involves a lot of stages of manual review and approval. This increases the time from when an item is photographed to when it goes live on the website and can contribute to lost revenue. Fashion is a fast moving industry and new trends have to hit the market as soon as possible. Any attempts at speeding up the review process can help directly contribute to an increase in revenue.
 
 The dataset is downloaded from the Myntra website for existing products that are listed. Hence we also have the labels for these images. For example we know whether the item is a 'topwear' or 'bottomwear'. The dataset consists of 2000 images with half and half split between topwear and bottomwear.
 
